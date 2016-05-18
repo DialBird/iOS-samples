@@ -1,0 +1,7 @@
+github "Alamofire/Alamofire"
+github "SwiftyJSON/SwiftyJSON"
+github "HighBay/PageMenu"
+github "nolanw/HTMLReader"
+github "SVProgressHUD/SVProgressHUD"
+github "https://github.com/TimOliver/TOWebViewController"
+github "dekatotoro/PullToRefreshSwift"
