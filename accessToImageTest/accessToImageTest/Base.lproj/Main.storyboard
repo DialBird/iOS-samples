@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juj-DI-4DQ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juj-DI-4DQ">
                                 <rect key="frame" x="69" y="500" width="32" height="30"/>
                                 <color key="backgroundColor" red="0.60466938752998767" green="0.93602493956826338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="start"/>
@@ -25,7 +25,7 @@
                                     <action selector="tapStartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06I-ve-HYp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-EE-6gY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-EE-6gY">
                                 <rect key="frame" x="171" y="500" width="32" height="30"/>
                                 <color key="backgroundColor" red="0.60466938752998767" green="0.93602493956826338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="save"/>
@@ -33,7 +33,7 @@
                                     <action selector="tapSaveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZCR-nM-SFd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfk-s0-FhH">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfk-s0-FhH">
                                 <rect key="frame" x="273" y="500" width="42" height="30"/>
                                 <color key="backgroundColor" red="0.60466938752998767" green="0.93602493956826338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="album"/>
@@ -41,7 +41,7 @@
                                     <action selector="tapAlbumBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ko-q3-6XN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-zw-FAc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-zw-FAc">
                                 <rect key="frame" x="20" y="64" width="335" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="tbO-Up-4tl"/>
