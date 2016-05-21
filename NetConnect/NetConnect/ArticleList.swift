@@ -33,25 +33,24 @@ class ArticleList: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         getArticles()
     }
+    
+    
+    //ライフサイクル------------------------------------------------------
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
 
-    //tableプロトコル
+    
+    //tableプロトコル------------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-//        let ranNum: Int = Int(arc4random_uniform(2))
-//        if ranNum == 0{
             let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
             let article = articles[indexPath.row]
             cell.titleTextLabel.text = article["title"]!
             cell.componentTextLabel.text = article["userid"]!
             return cell
-//        }else{
-//            let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell2") as! CustomCell2
-//            return cell
-//        }
-        
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
@@ -61,8 +60,27 @@ class ArticleList: UIViewController, UITableViewDataSource, UITableViewDelegate 
         selectedURL = articles[indexPath.row]["url"]!
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        
+//        let url = NSURL(string: selectedURL)!
+//        if UIApplication.sharedApplication().canOpenURL(url){
+//            UIApplication.sharedApplication().openURL(url)
+//        }
+        
+        
+        performSegueWithIdentifier("toWebSegue", sender: nil)
     }
     
+    
+    //ページ遷移------------------------------------------------------
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toWebSegue"{
+            let nextVC = segue.destinationViewController as! WebBrowseViewController
+            nextVC.selectedUrl = self.selectedURL
+        }
+    }
+    
+    
+    //記事を取得する------------------------------------------------------
     func getArticles(){
         Alamofire.request(.GET, "https://qiita.com/api/v2/items").responseJSON{responce -> Void in
             guard let object = responce.result.value else {return}
@@ -70,7 +88,8 @@ class ArticleList: UIViewController, UITableViewDataSource, UITableViewDelegate 
             json.forEach{(_,json)-> Void in
                 let article: [String : String?] = [
                     "title": json["title"].string,
-                    "userid": json["user"]["id"].string
+                    "userid": json["user"]["id"].string,
+                    "url": json["url"].string
                 ]
                 self.articles.append(article)
             }

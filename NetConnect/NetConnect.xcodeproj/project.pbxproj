@@ -24,6 +24,7 @@
 		258EED3E1CEC2D6D00DCF0C6 /* CustomCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258EED3D1CEC2D6D00DCF0C6 /* CustomCell2.xib */; };
 		258EED401CEC2DBD00DCF0C6 /* CustomCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258EED3F1CEC2DBD00DCF0C6 /* CustomCell2.swift */; };
 		258EED431CEC2E6D00DCF0C6 /* CustomButtonTestControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258EED421CEC2E6D00DCF0C6 /* CustomButtonTestControllerView.swift */; };
+		258EED451CEC5A4F00DCF0C6 /* WebBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258EED441CEC5A4F00DCF0C6 /* WebBrowseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		258EED3D1CEC2D6D00DCF0C6 /* CustomCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell2.xib; sourceTree = "<group>"; };
 		258EED3F1CEC2DBD00DCF0C6 /* CustomCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell2.swift; sourceTree = "<group>"; };
 		258EED421CEC2E6D00DCF0C6 /* CustomButtonTestControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonTestControllerView.swift; sourceTree = "<group>"; };
+		258EED441CEC5A4F00DCF0C6 /* WebBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,16 +94,17 @@
 		250E6BB11CEB24C600B2866A /* NetConnect */ = {
 			isa = PBXGroup;
 			children = (
-				258EED411CEC2DD500DCF0C6 /* CustomButton */,
-				258EED3C1CEC1BF300DCF0C6 /* CustomCell */,
 				258EED3A1CEC16B000DCF0C6 /* ParseFeed.swift */,
 				250E6BB21CEB24C600B2866A /* AppDelegate.swift */,
 				250E6BB41CEB24C600B2866A /* ArticleList.swift */,
+				258EED421CEC2E6D00DCF0C6 /* CustomButtonTestControllerView.swift */,
+				258EED441CEC5A4F00DCF0C6 /* WebBrowseViewController.swift */,
 				250E6BB91CEB24C600B2866A /* Assets.xcassets */,
 				250E6BB61CEB24C600B2866A /* Main.storyboard */,
-				258EED421CEC2E6D00DCF0C6 /* CustomButtonTestControllerView.swift */,
 				250E6BBB1CEB24C600B2866A /* LaunchScreen.storyboard */,
 				250E6BBE1CEB24C600B2866A /* Info.plist */,
+				258EED411CEC2DD500DCF0C6 /* CustomButton */,
+				258EED3C1CEC1BF300DCF0C6 /* CustomCell */,
 			);
 			path = NetConnect;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				250E6BB51CEB24C600B2866A /* ArticleList.swift in Sources */,
 				258EED431CEC2E6D00DCF0C6 /* CustomButtonTestControllerView.swift in Sources */,
+				258EED451CEC5A4F00DCF0C6 /* WebBrowseViewController.swift in Sources */,
 				258EED3B1CEC16B000DCF0C6 /* ParseFeed.swift in Sources */,
 				258EED381CEC13DB00DCF0C6 /* CustomCell.swift in Sources */,
 				250E6BB31CEB24C600B2866A /* AppDelegate.swift in Sources */,

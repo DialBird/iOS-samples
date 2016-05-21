@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="accessToImageTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juj-DI-4DQ">
+                                <rect key="frame" x="69" y="500" width="32" height="30"/>
+                                <color key="backgroundColor" red="0.60466938752998767" green="0.93602493956826338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="tapStartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06I-ve-HYp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-EE-6gY">
+                                <rect key="frame" x="171" y="500" width="32" height="30"/>
+                                <color key="backgroundColor" red="0.60466938752998767" green="0.93602493956826338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="tapSaveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZCR-nM-SFd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfk-s0-FhH">
+                                <rect key="frame" x="273" y="500" width="42" height="30"/>
+                                <color key="backgroundColor" red="0.60466938752998767" green="0.93602493956826338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="album"/>
+                                <connections>
+                                    <action selector="tapAlbumBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ko-q3-6XN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-zw-FAc">
+                                <rect key="frame" x="20" y="64" width="335" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="tbO-Up-4tl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q3f-EE-6gY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1OL-IQ-p1V"/>
+                            <constraint firstItem="Sxe-zw-FAc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6bC-fk-Gvo"/>
+                            <constraint firstItem="q3f-EE-6gY" firstAttribute="leading" secondItem="juj-DI-4DQ" secondAttribute="trailing" constant="70" id="BXr-py-ViA"/>
+                            <constraint firstAttribute="trailing" secondItem="Sxe-zw-FAc" secondAttribute="trailing" constant="20" id="FZ8-T9-uht"/>
+                            <constraint firstItem="q3f-EE-6gY" firstAttribute="top" secondItem="Sxe-zw-FAc" secondAttribute="bottom" constant="36" id="GkX-8E-gwd"/>
+                            <constraint firstItem="xfk-s0-FhH" firstAttribute="leading" secondItem="q3f-EE-6gY" secondAttribute="trailing" constant="70" id="P4d-eX-85u"/>
+                            <constraint firstItem="xfk-s0-FhH" firstAttribute="top" secondItem="q3f-EE-6gY" secondAttribute="top" id="aJ7-sL-RYs"/>
+                            <constraint firstItem="juj-DI-4DQ" firstAttribute="top" secondItem="q3f-EE-6gY" secondAttribute="top" id="fFZ-Eg-t2g"/>
+                            <constraint firstItem="Sxe-zw-FAc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ugo-iU-vVs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8JD-vb-eUD"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="albumBtn" destination="xfk-s0-FhH" id="phP-pR-7aP"/>
+                        <outlet property="cameraView" destination="Sxe-zw-FAc" id="glg-hB-w7L"/>
+                        <outlet property="saveBtn" destination="q3f-EE-6gY" id="H7z-U6-Li7"/>
+                        <outlet property="startBtn" destination="juj-DI-4DQ" id="hA1-bn-AO4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630.5" y="-334.5"/>
+        </scene>
+    </scenes>
+</document>
